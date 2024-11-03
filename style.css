@@ -58,8 +58,8 @@ body {
 .menu-toggle .bar {
     width: 25px;
     height: 3px;
-    background-color: #2A2A72;
-    margin: 3px 0;
+    background-color: black; /* Couleur noire pour les barres */
+    margin: 4px 0;
 }
 
 /* Barre de menu pour desktop */
@@ -125,4 +125,35 @@ body {
     padding: 10px 20px;
 }
 .sidebar a {
-    color: #2A2A72
+    color: #2A2A72;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.sidebar .icon {
+    margin-right: 5px;
+}
+
+/* Bouton de fermeture */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #2A2A72;
+}
+
+/* Médias queries pour mobile */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Masquer le menu desktop sur mobile */
+    }
+    .menu-toggle {
+        display: flex; /* Afficher le bouton hamburger sur mobile */
+    }
+    .header {
+        justify-content: space-between;
+    }
+}
