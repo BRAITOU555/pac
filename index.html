@@ -18,9 +18,10 @@
                 <span class="phone-number">07 63 80 26 26</span>
             </div>
         </div>
+        <div class="menu-toggle" onclick="toggleSidebar()">☰</div> <!-- Bouton hamburger pour mobile -->
     </header>
 
-    <!-- Barre de menu -->
+    <!-- Barre de menu pour desktop -->
     <nav class="navbar">
         <ul>
             <li><a href="#"><span class="icon">🏠</span>Accueil</a></li>
@@ -33,7 +34,21 @@
         </ul>
     </nav>
 
-    <!-- Script pour le menu hamburger (si nécessaire pour mobile) -->
+    <!-- Menu latéral pour mobile -->
+    <div class="sidebar" id="sidebar">
+        <span class="close-btn" onclick="toggleSidebar()">×</span>
+        <ul>
+            <li><a href="#"><span class="icon">🏠</span>Accueil</a></li>
+            <li><a href="#"><span class="icon">❄️</span>Climatisation</a></li>
+            <li><a href="#"><span class="icon">🔥</span>Pompe à Chaleur</a></li>
+            <li><a href="#"><span class="icon">💧</span>Ballon Thermodynamique</a></li>
+            <li><a href="#"><span class="icon">🛠️</span>Dépannage Pompe à Chaleur</a></li>
+            <li><a href="#"><span class="icon">🔧</span>Dépannage Climatisation</a></li>
+            <li><a href="#"><span class="icon">📞</span>Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Script pour le menu hamburger -->
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
